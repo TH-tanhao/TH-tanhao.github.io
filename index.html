@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/08/%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%A2%9E%E5%8A%A0%E3%80%81%E5%87%8F%E5%B0%91%E4%BE%8B%E5%AD%90/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/08/%E6%97%A5%E6%9C%9F%E5%A2%9E%E9%95%BF%E5%87%8F%E5%B0%91%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hao Tan">
@@ -279,7 +279,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/08/%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E3%80%81%E6%97%A5%E6%9C%9F%EF%BC%8C%E5%A2%9E%E5%8A%A0%E3%80%81%E5%87%8F%E5%B0%91%E4%BE%8B%E5%AD%90/" itemprop="url">处理时间、日期，增加、减少例子</a></h1>
+                <a class="post-title-link" href="/2020/01/08/%E6%97%A5%E6%9C%9F%E5%A2%9E%E9%95%BF%E5%87%8F%E5%B0%91%E6%96%B9%E6%B3%95/" itemprop="url">日期增长减少方法</a></h1>
         
 
         <div class="post-meta">
@@ -291,7 +291,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-08T10:07:48+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-08T10:16:06+08:00">
                 2020-01-08
               </time>
             
@@ -331,7 +331,7 @@
       
         
           
-            <h1 id="处理时间、日期，增加、减少例子"><a href="#处理时间、日期，增加、减少例子" class="headerlink" title="处理时间、日期，增加、减少例子"></a>处理时间、日期，增加、减少例子</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Date lePublishTime = independenInspectionQC.getLePublishTime();</span><br><span class="line">			Calendar   calendar = <span class="keyword">new</span> GregorianCalendar(); </span><br><span class="line">			calendar.setTime(lePublishTime); </span><br><span class="line">			calendar.add(calendar.DATE,<span class="number">1</span>); <span class="comment">//把日期往后增加一天,整数  往后推,负数往前移动 </span></span><br><span class="line">			lePublishTime=calendar.getTime();</span><br><span class="line">			independenInspectionQC.setLePublishTime(lePublishTime);</span><br></pre></td></tr></table></figure>
+            <h1 id=""><a href="#" class="headerlink" title=""></a></h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Date lePublishTime = independenInspectionQC.getLePublishTime();</span><br><span class="line">			Calendar   calendar = <span class="keyword">new</span> GregorianCalendar(); </span><br><span class="line">			calendar.setTime(lePublishTime); </span><br><span class="line">			calendar.add(calendar.DATE,<span class="number">1</span>); <span class="comment">//把日期往后增加一天,整数  往后推,负数往前移动 </span></span><br><span class="line">			lePublishTime=calendar.getTime();</span><br><span class="line">			independenInspectionQC.setLePublishTime(lePublishTime);</span><br></pre></td></tr></table></figure>
 
 <p><strong>这样得到的calendar.getTime就是一个Date类型</strong></p>
 
