@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="构建树形的父子节点条件: ![表结构](&#x2F;Users&#x2F;haotan&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20191216202254778.png) ![表数据](&#x2F;Users&#x2F;haotan&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-2019121620240167">
+<meta name="description" content="构建树形的父子节点条件:   实现过程：  我这张表是没有父code和子code的所以，我可以用typeName作为父节点，以name作为子节点。现构造数据，在查出来的数据list集合里面，新增加一条name等于其他数据的typeName，其他值为null的数据。 前端页面写法： 我的父节点是typeName，子节点是name。 1234567891011121314151617181920212">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于如何构建父子节点">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9&#x2F;index.html">
 <meta property="og:site_name" content="Hao Tan">
-<meta property="og:description" content="构建树形的父子节点条件: ![表结构](&#x2F;Users&#x2F;haotan&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20191216202254778.png) ![表数据](&#x2F;Users&#x2F;haotan&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-2019121620240167">
+<meta property="og:description" content="构建树形的父子节点条件:   实现过程：  我这张表是没有父code和子code的所以，我可以用typeName作为父节点，以name作为子节点。现构造数据，在查出来的数据list集合里面，新增加一条name等于其他数据的typeName，其他值为null的数据。 前端页面写法： 我的父节点是typeName，子节点是name。 1234567891011121314151617181920212">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-16T12:35:27.874Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9&#x2F;image-20191216202254778.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9&#x2F;image-20191216202401672.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9&#x2F;image-20191216203106405.png">
+<meta property="og:updated_time" content="2020-01-15T09:44:11.770Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;16&#x2F;%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9&#x2F;image-20191216202254778.png">
 
 
 
@@ -329,10 +333,10 @@
 
       
         <h1 id="构建树形的父子节点"><a href="#构建树形的父子节点" class="headerlink" title="构建树形的父子节点"></a>构建树形的父子节点</h1><p><strong>条件:</strong></p>
-<p>![表结构](/Users/haotan/Library/Application Support/typora-user-images/image-20191216202254778.png)</p>
-<p>![表数据](/Users/haotan/Library/Application Support/typora-user-images/image-20191216202401672.png)</p>
+<p><img src="/2019/12/16/%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9/image-20191216202254778.png" alt="表结构"></p>
+<p><img src="/2019/12/16/%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9/image-20191216202401672.png" alt="表数据"></p>
 <p><strong>实现过程：</strong></p>
-<p>![返回回来的数据](/Users/haotan/Library/Application Support/typora-user-images/image-20191216203106405.png)</p>
+<p><img src="/2019/12/16/%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9/image-20191216203106405.png" alt="返回回来的数据"></p>
 <p>我这张表是没有父code和子code的所以，我可以用typeName作为父节点，以name作为子节点。现构造数据，在查出来的数据list集合里面，新增加一条name等于其他数据的typeName，其他值为null的数据。</p>
 <p><strong>前端页面写法：</strong></p>
 <p>我的父节点是typeName，子节点是name。</p>
